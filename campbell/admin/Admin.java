@@ -15,8 +15,8 @@ public class Admin {
 
         Connect conn = new Connect();
 
-        String query = "insert into card_catalog (title, author_lname, author_fname, item_type, genre, subgenre, lcc, isbn10, isbn13, key_words, summary, room, location)"
-        + "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String query = "insert into books (title, author_lname, author_fname, genre, subgenre, lcc, isbn10, isbn13, key_words, summary, room, location)"
+        + "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         PreparedStatement prep = conn.connectDB().prepareStatement(query);
 
@@ -32,7 +32,6 @@ public class Admin {
         prep.setString(10, args[9]);
         prep.setString(11, args[10]);
         prep.setString(12, args[11]);
-        prep.setString(13, args[12]);
 
         prep.execute();
 
