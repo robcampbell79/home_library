@@ -124,8 +124,6 @@ public class Library extends Application {
         pane.getChildren().addAll(
             lbl, 
             btnAdmin,
-            lblItem,
-            txtItem,
             lblTitle, 
             txtTitle, 
             lblAuthorL, 
@@ -169,7 +167,6 @@ public class Library extends Application {
             String title = txtTitle.getText();
             String authorL = txtAuthorL.getText();
             String authorF = txtAuthorF.getText();
-            String item = txtItem.getText();
             String genre = txtGenre.getText();
             String sGenre = txtSGenre.getText();
             String lcc = txtLcc.getText();
@@ -180,21 +177,20 @@ public class Library extends Application {
             String room = txtRoom.getText();
             String location = txtLocation.getText();
 
-            String[] params = new String[13];
+            String[] params = new String[12];
 
             params[0] = title;
             params[1] = authorL;
             params[2] = authorF;
-            params[3] = item;
-            params[4] = genre;
-            params[5] = sGenre;
-            params[6] = lcc;
-            params[7] = isbn10;
-            params[8] = isbn13;
-            params[9] = keyWords;
-            params[10] = summary;
-            params[11] = room;
-            params[12] = location;
+            params[3] = genre;
+            params[4] = sGenre;
+            params[5] = lcc;
+            params[6] = isbn10;
+            params[7] = isbn13;
+            params[8] = keyWords;
+            params[9] = summary;
+            params[10] = room;
+            params[11] = location;
 
             admin.addBooks(params);
 
